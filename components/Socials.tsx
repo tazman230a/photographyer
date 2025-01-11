@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   ImFacebook,
@@ -9,34 +10,42 @@ import {
 
 const socials = () => {
   return (
-    <div className="xl:flex ml-15">
-      <ul className="flex gap-x-4">
-        <li>
-          <a href="https://www.facebook.com" target="_blank">
-            <ImFacebook />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank">
-            <ImTwitter />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.pinterest.com" target="_blank">
-            <ImPinterest />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com" target="_blank">
-            <ImInstagram />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com" target="_blank">
-            <ImYoutube />
-          </a>
-        </li>
-      </ul>
+    <div className="flex flex-row px-[4rem] ml-15">
+      <Link
+        href="https://www.facebook.com"
+        target="_blank"
+        className="px-[1rem]"
+      >
+        <ImFacebook />
+      </Link>
+      <Link
+        href="https://www.twitter.com"
+        target="_blank"
+        className="px-[1rem]"
+      >
+        <ImTwitter />
+      </Link>
+      <Link
+        href="https://www.pinterest.com"
+        target="_blank"
+        className="px-[1rem]"
+      >
+        <ImPinterest />
+      </Link>
+      <Link
+        href="https://www.instagram.com"
+        target="_blank"
+        className="px-[1rem]"
+      >
+        <ImInstagram />
+      </Link>
+      <Link
+        href="https://www.youtube.com"
+        target="_blank"
+        className="px-[1rem]"
+      >
+        <ImYoutube />
+      </Link>
     </div>
   );
 };

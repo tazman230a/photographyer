@@ -1,6 +1,5 @@
 'use client'
 
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -11,6 +10,7 @@ const Home = () => {
   return (
     <section className="no-scrollbar w-full  max-xl:max-h-screen max-xl:overflow-y-scroll">
       <Header />
+      <div className="w-full mx-auto relative">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -19,7 +19,7 @@ const Home = () => {
           duration: 2,
           ease: "easeIn",
         }}
-        className="flex flex-1 mx-auto h-full relative"
+        className="flex flex-col sm:flex-row mx-auto h-full relative"
       >
         <div className="ml-[6rem]">
           <motion.div
@@ -51,7 +51,7 @@ const Home = () => {
             duration: 2,
             ease: "circIn",
           }}
-          className="lg:flex-1"
+          className=""
         >
           <Image
             src="/assets/2eric.png"
@@ -61,7 +61,8 @@ const Home = () => {
           />
         </motion.div>
       </motion.div>
-      <Footer />
+      </div>
+       
     </section>
   );
 };

@@ -1,19 +1,33 @@
-import Footer from "@/components/Footer";
+"use client";
+
 import Header from "@/components/Header";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
   return (
-    <section className="section">
+    <section className="body">
       <div>
         <Header />
-        <div className="m-[5rem] flex flex-row">
+        <motion.div
+          initial={{ opacity: 0, y: "-50%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-50%" }}
+          transition={{
+            duration: 2,
+            ease: "linear",
+          }}
+          className="m-[5rem] px-3 flex flex-row"
+        >
           <div className="">
-            <h1 className="text-[5rem] font-bold">Contact me</h1>
-            <p className="mb-12 text-[2rem]">
-              I would love to get suggestion from you.
+            <h1 className="text-[5rem] font-primary font-bold text-slate-900">
+              Contact me
+            </h1>
+            <p className="mb-12 text-[2rem] font-primary font-semibold text-slate-700">
+              I would love to get
+              <br /> suggestion from you.
             </p>
             <form className="flex flex-col gap-y-4">
               <div className="flex gap-x-10">
@@ -32,13 +46,25 @@ const Contact = () => {
                 className="border border-slate-400 h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]"
                 placeholder="Your message"
               />
-              <Link href={"mailto:gnmike404@gmail.com"} className="btn w-[15rem] bg-slate-500">
+              <Link
+                href={"mailto:gnmike404@gmail.com"}
+                className="btn w-[15rem] bg-slate-500"
+              >
                 Sent it
               </Link>
             </form>
           </div>
 
-          <div className="pl-[8rem]">
+          <motion.div
+            initial={{ opacity: 0, y: "-50%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-50%" }}
+            transition={{
+              duration: 2.5,
+              ease: "linear",
+            }}
+            className="pl-[8rem]"
+          >
             <Image
               src="/assets/carmera1.png"
               alt="camera"
@@ -46,10 +72,9 @@ const Contact = () => {
               height={500}
               className="m-[5rem]"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-      <Footer />
     </section>
   );
 };

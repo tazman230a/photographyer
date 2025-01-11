@@ -9,16 +9,16 @@ import { motion } from "framer-motion";
 
 const Portfolio = () => {
   return (
-    <section className="container">
+    <section className="">
       <div className="mx-auto h-full relative">
         <Header />
         <motion.div
-          initial={{ opacity: 0, y: "100%" }}
+          initial={{ opacity: 0, y: "-50%" }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: "100%" }}
+          exit={{ opacity: 0, y: "-50%" }}
           transition={{
             duration: 2.5,
-            ease: "easeIn",
+            ease: "anticipate",
           }}
           className="mx-[7rem] py-11  flex flex-row justify-between"
         >
@@ -32,9 +32,7 @@ const Portfolio = () => {
             </Link>
           </div>
 
-          <div
-            className="grid grid-cols-2 pl-[10rem] lg:gap-2"
-          >
+          <div className="grid grid-cols-2 pl-[10rem] lg:gap-2 ">
             <div className="">
               <Image
                 src="/assets/1.png"
