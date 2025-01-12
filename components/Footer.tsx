@@ -3,10 +3,23 @@ import Socials from "./Socials";
 
 const Footer = () => {
   return (
-    <div className="flex flex-1 sm:flex-col justify-between m-10 px-[2rem] mb-6 py-11 items-center">
-      <Socials />  
-      <h1 className="text-slate-500 mr-11 sm:flex-row">&copy; 2025 Eric Mesiyah McGinnis</h1>
-    </div>
+    <footer className="w-full py-4 text-black">
+      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row">
+        <p className="text-center text-sm md:text-left">
+            &copy; 2025 Eric Mesiyah McGinnis
+        </p>
+
+        <div className="flex justify-center gap-4 md:justify-start">
+          <Socials />
+        </div>
+
+        <div>
+          <a href="#privacy-policy" className="text-center text-sm hover:underline md:text-right">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
 

@@ -22,18 +22,18 @@ const Header = () => {
           </Link>
         </div>
         <nav className="hidden relative xl:flex gap-x-12 font-bold w-full">
-          <div className="font-secondary text-primary text-3xl pl-11">
+          <div className="font-secondary text-primary text-3xl text-slate-400 pl-11">
             <ul className="flex flex-row space-x-5">
-              <li>
+              <li className="hover:text-slate-900 hover:border-b hover:border-b-slate-900">
                 <a href={"/"}>Home</a>
               </li>
-              <li>
+              <li className="hover:text-slate-900 hover:border-b hover:border-b-slate-900">
                 <a href={"/about"}>About</a>
               </li>
-              <li>
+              <li className="hover:text-slate-900 hover:border-b hover:border-b-slate-900">
                 <a href={"/portfolio"}>Portfolio</a>
               </li>
-              <li>
+              <li className="hover:text-slate-900 hover:border-b hover:border-b-slate-900">
                 <a href={"/contact"}>Contact</a>
               </li>
             </ul>

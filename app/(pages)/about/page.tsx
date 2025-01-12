@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { fadeIn } from "@/lib/motion";
+import Footer from "@/components/Footer";
 
 const About = () => {
 
@@ -19,7 +21,7 @@ const About = () => {
           duration: 2,
           ease: "easeIn",
         }}
-        className="container mx-auto h-full relative"
+        className="mx-auto h-full relative"
       >
         {/* text & img wrapper */}
         <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-24">
@@ -33,7 +35,9 @@ const About = () => {
             />
           </div>
           {/* text */}
-          <div className="flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
+          <motion.div 
+              variants={fadeIn()}
+              className="flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
             <h1 className="h1">About me</h1>
             <p className="mb-12 max-w-sm">
               At Eric McGinnis Photography, our mission is to capture the
@@ -52,9 +56,10 @@ const About = () => {
             <Link href={"/portfolio"} className="btn w-[15rem] bg-slate-500">
               View my work
             </Link>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
+      <Footer />
     </section>
   );
 };

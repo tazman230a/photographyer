@@ -1,15 +1,15 @@
 "use client"
 
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const Portfolio = () => {
   return (
-    <section className="">
+    <section className="container">
       <div className="mx-auto h-full relative">
         <Header />
         <motion.div

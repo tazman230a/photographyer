@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { textVariant } from "../../lib/motion";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -23,13 +25,7 @@ const Home = () => {
       >
         <div className="ml-[6rem]">
           <motion.div
-            initial={{ opacity: 0, y: "-50%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-50%" }}
-            transition={{
-              duration: 2.5,
-              ease: "anticipate",
-            }}
+            variants={textVariant()}
           >
             <h1 className="text-[54px] lg:text-[108px] font-bold capitalize leading-[120%] tracking-[-0.05em] pt-[29px]">
               photographer
@@ -62,7 +58,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
       </div>
-       
+       <Footer />
     </section>
   );
 };
